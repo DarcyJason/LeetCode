@@ -20,7 +20,7 @@ impl Solution {
     let mut map = HashMap::new();
     for (i, &num) in nums.iter().enumerate() {
         match map.get(&(target - num)) {
-            Some(&j) => return vec![j,i as i32],
+            Some(&j) => return vec![j, i as i32],
             None => map.insert(num, i as i32),
         };
     }
