@@ -12,7 +12,7 @@ impl Solution {
     }
 }
 
-// 方法2
+// 方法2:
 use std::collections::HashMap;
 
 impl Solution {
@@ -21,9 +21,7 @@ impl Solution {
     for (i, &num) in nums.iter().enumerate() {
         match map.get(&(target - num)) {
             Some(&j) => return vec![j,i as i32],
-            None => {
-                map.insert(num, i as i32);
-            }
+            None => map.insert(num, i as i32),
         }
     }
     return vec![]
